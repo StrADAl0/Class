@@ -29,6 +29,6 @@ with open('out_file.csv', 'w', newline='') as out:
     writer = csv.writer(out, delimiter=';')
     writer.writerow([root])
     while tree[root]:
-        writer.writerow(tree[root])
+        writer.writerow(sorted(tree[root]))
         root = max(tree[root], key=lambda x: tree[x])
 
