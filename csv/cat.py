@@ -22,11 +22,12 @@ for i in tree.keys():
             break
     if(cnd):
         root = i
+        break
 
 
-with open('outfile.csv', 'w') as out:
+with open('outfile.csv', 'w', newline='') as out:
     writer = csv.writer(out, delimiter=';')
-    writer.writerow(root)
+    writer.writerow([root])
     while tree[root]:
         writer.writerow(tree[root])
         root = max(tree[root], key=lambda x: tree[x])
