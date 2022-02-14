@@ -7,7 +7,7 @@ ans1 = 0
 ans2 = ''
 ans3 = ''
 for i in range(len(data)):
-    t = 0
+    t = 1
     for j in range(i + 1, len(data)):
         if int(data[j][2]) <= int(data[j - 1][2]):
             if(t > ans1):
