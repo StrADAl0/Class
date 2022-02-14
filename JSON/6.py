@@ -11,5 +11,5 @@ for i in data:
     ans[i[0]].append(i)
 
 
-with open('russian_words.json', encoding='utf-8') as out:
+with open('russian_words.json', 'w', encoding='utf-8') as out:
     json.dump(ans, out)
