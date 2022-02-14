@@ -1,0 +1,47 @@
+pineapple.bmp
+venison.bmp
+----------
+Summary: 382 GB
+
+jelly.docx
+sparkling_water.docx
+----------
+Summary: 102 KB
+
+almond.exe
+cookie.exe
+potato.exe
+----------
+Summary: 201 GB
+
+box_of_chocolates.jpg
+veal.jpg
+----------
+Summary: 472 MB
+
+brussels_sprout.pas
+candy.pas
+----------
+Summary: 571 MB
+
+broccoli.py
+chocolate.py
+cinnamon_roll.py
+croissant.py
+----------
+Summary: 831 GB
+
+cake.txt
+----------
+Summary: 781 KB
+
+cabbage.xlsx
+croissant.xlsx
+----------
+Summary: 271 GB
+
+blackberry.zip
+sugar.zip
+----------
+Summary: 231 GB
+

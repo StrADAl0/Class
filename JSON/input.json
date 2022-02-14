@@ -1,0 +1,33 @@
+[
+    {
+        "id": 1,
+        "radius": 15,
+        "x": 3,
+        "y": 4,
+        "colors": [
+            "red",
+            "blue"
+        ]
+    },
+    {
+        "id": 2,
+        "radius": 15,
+        "x": 6,
+        "y": 8,
+        "colors": [
+            "yellow",
+            "black",
+            "white"
+        ]
+    },
+    {
+        "id": 3,
+        "radius": 15,
+        "x": 2,
+        "y": 4,
+        "colors": [
+            "magenta",
+            "cyan"
+        ]
+    }
+]
