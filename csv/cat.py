@@ -25,7 +25,7 @@ for i in tree.keys():
         break
 
 
-with open('outfile.csv', 'w', newline='') as out:
+with open('out_file.csv', 'w', newline='') as out:
     writer = csv.writer(out, delimiter=';')
     writer.writerow([root])
     while tree[root]:
