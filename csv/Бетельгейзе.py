@@ -9,7 +9,7 @@ ans3 = ''
 for i in range(len(data)):
     t = 1
     for j in range(i + 1, len(data)):
-        if int(data[j][2]) <= int(data[j - 1][2]):
+        if int(data[j][2]) > int(data[j - 1][2]):
             if(t > ans1):
                 ans1, ans2, ans3 = t, data[i][0], data[i][1]
                 break
