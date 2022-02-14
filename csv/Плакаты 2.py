@@ -8,7 +8,7 @@ with open('posters.csv', encoding='utf-8') as infile1, open('in_file.txt', encod
 
 for i in data:
     for j in i.keys():
-        if i[j].isdigit():
+        if i[j].isdigit() and i[j].split('-') == 1:
             i[j] = int(i[j])
 
 
