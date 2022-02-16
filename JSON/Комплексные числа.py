@@ -4,12 +4,15 @@ from sys import stdin
 
 data = [i.rstrip() for i in stdin]
 data = [i.split(' = ')[1] for i in data]
+print(data)
 
 
 ans = {"complex": []}
 for i in data:
     if len(i.split(' + ')) < 2:
         t = i.split(' - ')
+        t[1] = '-' + t[1]
+        print(t)
     else:
         t = i.split(' + ')
     t[1] = t[1].split(' * ')[0]
