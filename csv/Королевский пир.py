@@ -5,7 +5,7 @@ import csv
 data = [i.rstrip().split('\t') for i in sys.stdin]
 
 ans = []
-names = list(set([j[0] for j in data]))
+names = sorted(list(set([j[0] for j in data])))
 ingridients = list(set([j[1] for j in data]))
 
 
