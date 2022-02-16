@@ -13,9 +13,9 @@ last_word = input().lower()
 game = True
 while game:
     if last_word.lower() == 'сдаюсь':
-            print('Игра закончена! Победил компьютер.')
-            game = False
-            break
+        print('Игра закончена! Победил компьютер.')
+        game = False
+        break
     while last_word[-1] in haram:
         last_word = last_word[:len(last_word) - 1]
     last_letter = last_word[-1]
