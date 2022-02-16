@@ -28,7 +28,11 @@ for i in tree.keys():
 with open('out_file.csv', 'w', newline='') as out:
     writer = csv.writer(out, delimiter=';')
     writer.writerow([root])
-    while tree[root]:
-        writer.writerow(sorted(tree[root]))
-        root = max(tree[root], key=lambda x: tree[x])
+    level = tree[root]
+    while level:
+        new_level = []
+        writer.writerow(sorted(level))
+        for i in level:
+            new_level += tree[i]
+        level = new_level
 
