@@ -9,7 +9,7 @@ with open('russian_words.json', encoding='utf8') as infile:
 
 used = []
 
-last_word = input()
+last_word = input().lower()
 game = True
 while game:
     if last_word.lower() == 'сдаюсь':
@@ -23,6 +23,9 @@ while game:
         if i not in used:
             used.append(i)
             print(i)
+            for j in range(len(i) - 1, -1, -1):
+                if i[j] not in haram:
+                    last_letter = i[j]
             break
         if i == data[last_letter][-1]:
             print('Игра закончена! Победил пользователь.')
@@ -33,7 +36,7 @@ while game:
         game = False
         break
     while True:
-        last_word = input()
+        last_word = input().lower()
         if last_word.lower() == 'сдаюсь':
             print('Игра закончена! Победил компьютер.')
             game = False
