@@ -1,5 +1,5 @@
 def issquare(n):
-    retunr n ** 0.5 == int(n ** 0,5)
+    return n ** 0.5 == int(n ** 0,5)
 
 
 def func():
