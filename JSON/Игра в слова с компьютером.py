@@ -58,23 +58,24 @@ while game:
     #Ответ игрока
     while True:
         #Вводится слово
-        last_word = input()
-        last_word = last_word.lower()
+        t = input()
+        t = t.lower()
         #Проверка выхода из игры
-        if last_word == 'сдаюсь':
+        if t == 'сдаюсь':
             print('Игра закончена! Победил компьютер.')
             game = False
             break
         #Проверка правильной последней буквы
-        if last_word[0] != last_letter:
+        if t[0] != last_letter:
             print('Это слово не на букву {}.'.format(last_letter))
             continue
         #Проверка существования слова
-        if last_word not in data[last_letter]:
+        if t not in data[last_letter]:
             print('Такого слова нет.')
             continue
         #Проверка, было ли использовано слово
-        if last_word in used:
+        if t in used:
             print('Это слово уже было.')
             continue
+        last_word = t
         break
