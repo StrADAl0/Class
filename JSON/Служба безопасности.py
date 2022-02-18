@@ -2,14 +2,12 @@ import json
 import csv
 
 
-with open('taxpayer_in.json', encoding='utf8') as infile1:
-    payers = json.load(infile1)
-
-with open('regions.csv', encoding='utf8') as infile2:
-    regions = list(csv.DictReader(infile2, delimiter=';'))
-
-
 def check_security(name, place):
+    with open('taxpayer_in.json', encoding='utf8') as infile1:
+        payers = json.load(infile1)
+    with open('regions.csv', encoding='utf8') as infile2:
+        regions = list(csv.DictReader(infile2, delimiter=';'))
+
     payer = filter(lambda x: (x['lastname'] == name[0], x['firstname'] == name[1], x['middlename'] == name[2]), payers)
     if len(list(payer)) == 0:
         return (None, None)
