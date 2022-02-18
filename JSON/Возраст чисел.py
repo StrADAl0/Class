@@ -3,7 +3,7 @@ import json
 
 
 def func(n, cnt=0):
-    if(len(n) == 1):
+    if(len(n) == 1):    
         return cnt
     ans = 1
     for i in n:
