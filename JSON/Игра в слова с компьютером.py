@@ -40,6 +40,7 @@ while game:
             for j in range(len(i) - 1, -1, -1):
                 if i[j] not in haram:
                     last_letter = i[j]
+                    break
             break
         #Условие для поражения компьютера
         if i == data[last_letter][-1]:
