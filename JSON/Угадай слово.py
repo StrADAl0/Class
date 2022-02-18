@@ -3,7 +3,7 @@ import random
 
 n = int(input())
 with open('words.json', encoding='utf8') as infile:
-    word = random.choice(infile.load()[n])
+    word = random.choice(json.load(infile)[n])
 
 
 game = True
