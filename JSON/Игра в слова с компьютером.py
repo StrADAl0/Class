@@ -20,7 +20,7 @@ game = True
 #Игра
 while game:
     #Проверка окончания
-    if last_word.lower() == 'сдаюсь':
+    if last_word == 'сдаюсь':
         print('Игра закончена! Победил компьютер.')
         game = False
         break
@@ -61,7 +61,7 @@ while game:
         last_word = input()
         last_word = last_word.lower()
         #Проверка выхода из игры
-        if last_word.lower() == 'сдаюсь':
+        if last_word == 'сдаюсь':
             print('Игра закончена! Победил компьютер.')
             game = False
             break
@@ -77,3 +77,4 @@ while game:
         if last_word in used:
             print('Это слово уже было.')
             continue
+        break
