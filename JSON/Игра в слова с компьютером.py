@@ -57,7 +57,8 @@ while game:
     #Ответ игрока
     while True:
         #Вводится слово
-        last_word = input().lower()
+        last_word = input()
+        last_word = last_word.lower()
         #Проверка выхода из игры
         if last_word.lower() == 'сдаюсь':
             print('Игра закончена! Победил компьютер.')
