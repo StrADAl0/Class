@@ -11,7 +11,7 @@ with open('regions.csv', encoding='utf8') as infile2:
 
 def check_security(name, place):
     payer = filter(lambda x: (x['lastname'] == name[0], x['firstname'] == name[1], x['middlename'] == name[2]), payers)
-    if not list(payer):
+    if len(list(payer)) == 0:
         return (None, None)
     payer = list(payer)[0]
     ans1 = 0
