@@ -35,13 +35,9 @@ while game:
             continue
         last_word = t
         break
-
-
     while last_word[-1] in haram:
         last_word = last_word[:len(last_word) - 1]
     last_letter = last_word[-1]
-
-
     for i in data[last_letter]:
         if i not in used:
             used.append(i)
