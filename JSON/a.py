@@ -21,7 +21,7 @@ def check_security(name, place):
         cnt1 += int(coefs1[i]) * int(p[i])
         cnt2 += int(coefs2[i]) * int(p[i])
     cnt2 += int(coefs2[10]) * int(p[10])
-    if(cnt1 % 11 != 8 and cnt2 % 11 != 1):
+    if(cnt1 % 11 != 8):
         print(cnt1 % 11, cnt2 % 11)
     cnt1 = str(cnt1 % 11)[-1]
     cnt2 = str(cnt2 % 11)[-1]
