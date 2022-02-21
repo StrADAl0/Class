@@ -32,12 +32,3 @@ def check_security(name, place):
     if cnt1 == p[10] and cnt2 == p[11]:
         ans2 = 0
     return (ans1, ans2)
-
-p = '481619071999'
-cnt1 = 0
-for i in range(10):
-    cnt1 += int(coefs1[i]) * int(p[i])
-cnt2 = 0
-for i in range(11):
-    cnt2 += int(coefs2[i]) * int(p[i])
-print(cnt1 % 11, cnt2 % 11)
