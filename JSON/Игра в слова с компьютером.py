@@ -14,15 +14,32 @@ used = []
 
 
 #Начало игры
-last_word = input().lower()
 game = True
 
 #Игра
 while game:
-    #Проверка окончания
-    if last_word == 'сдаюсь':
-        print('Игра закончена! Победил компьютер.')
-        game = False
+    while True:
+        #Вводится слово
+        t = input()
+        t = t.lower()
+        #Проверка выхода из игры
+        if t == 'сдаюсь':
+            print('Игра закончена! Победил компьютер.')
+            game = False
+            break
+        #Проверка правильной последней буквы
+        if t[0] != last_letter:
+            print('Это слово не на букву {}.'.format(last_letter))
+            continue
+        #Проверка существования слова
+        if t not in data[last_letter]:
+            print('Такого слова нет.')
+            continue
+        #Проверка, было ли использовано слово
+        if t in used:
+            print('Это слово уже было.')
+            continue
+        last_word = t
         break
 
     #Проверка последней буквы. Находим букву на которую начинаем новое слово
@@ -54,28 +71,4 @@ while game:
     if set(data[last_letter]) in set(filter(lambda x: x[0] == last_letter, used)):
         print('Игра закончена! Победил компьютер.')
         game = False
-        break
-    #Ответ игрока
-    while True:
-        #Вводится слово
-        t = input()
-        t = t.lower()
-        #Проверка выхода из игры
-        if t == 'сдаюсь':
-            print('Игра закончена! Победил компьютер.')
-            game = False
-            break
-        #Проверка правильной последней буквы
-        if t[0] != last_letter:
-            print('Это слово не на букву {}.'.format(last_letter))
-            continue
-        #Проверка существования слова
-        if t not in data[last_letter]:
-            print('Такого слова нет.')
-            continue
-        #Проверка, было ли использовано слово
-        if t in used:
-            print('Это слово уже было.')
-            continue
-        last_word = t
         break

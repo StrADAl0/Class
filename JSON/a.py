@@ -13,10 +13,10 @@ def check_security(name, place):
     if len(p) == 0:
         return (None, None)
     p = p[0]['tin']
-    ans1 = 0
+    ans1 = -1
     ans2 = -1
-    if str(p[:2]) != str(list(filter(lambda x: x['region_name'] == place, regions))[0]['region_code']):
-        ans1 = -1
+    if str(p[:2]) == str(list(filter(lambda x: x['region_name'] == place, regions))[0]['region_code']):
+        ans1 = 0
     cnt1, cnt2 = 0, 0
     for i in range(10):
         cnt1 += int(coefs1[i]) * int(p[i])
