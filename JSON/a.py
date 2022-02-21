@@ -24,6 +24,8 @@ def check_security(name, place):
     coefs2 = '3, 7, 2, 4, 10, 3, 5, 9, 4, 6, 8'.split(', ')
     for i in range(11):
         cnt2 = int(coefs2[i]) * int(p['tin'][i])
-    if cnt1 != cnt2:
+    cnt1 = cnt1 % 11
+    cnt2 = cnt2 % 11
+    if str(cnt1) != p['tin'][10] or str(cnt2) != p['tin'][11]:
         ans2 = -1
     return (ans1, ans2)
