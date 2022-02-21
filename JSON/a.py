@@ -19,7 +19,7 @@ def check_security(name, place):
         return (None, None)
     p = p[0]['tin']
     ans1 = 0
-    ans2 = 0
+    ans2 = -1
     if str(p[:2]) != str(list(filter(lambda x: x['region_name'] == place, regions))[0]['region_code']):
         ans1 = -1
     cnt1 = 0
@@ -32,6 +32,13 @@ def check_security(name, place):
     cnt2 = str(cnt2 % 11)[-1]
     if cnt1 == p[10] and cnt2 == p[11]:
         ans2 = 0
-    else:
-        ans2 = -1
     return (ans1, ans2)
+
+p = '481619071999'
+cnt1 = 0
+for i in range(10):
+    cnt1 += int(coefs1[i]) * int(p[i])
+cnt2 = 0
+for i in range(11):
+    cnt2 += int(coefs2[i]) * int(p[i])
+print(cnt1 % 11, cnt2 % 11)
