@@ -24,7 +24,7 @@ while game:
             game = False
             break
         if t[0] != last_letter:
-            if last_letter != None:
+            if last_letter is not None:
                 print('Это слово не на букву {}.'.format(last_letter))
                 continue
         if t not in data[last_letter]:
