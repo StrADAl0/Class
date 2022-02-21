@@ -22,12 +22,11 @@ def check_security(name, place):
     ans2 = -1
     if str(p[:2]) != str(list(filter(lambda x: x['region_name'] == place, regions))[0]['region_code']):
         ans1 = -1
-    cnt1 = 0
+    cnt1, cnt2 = 0, 0
     for i in range(10):
         cnt1 += int(coefs1[i]) * int(p[i])
-    cnt2 = 0
-    for i in range(11):
         cnt2 += int(coefs2[i]) * int(p[i])
+    cnt2 += int(coefs2[10]) * int(p[10])
     cnt1 = str(cnt1 % 11)[-1]
     cnt2 = str(cnt2 % 11)[-1]
     if cnt1 == p[10] and cnt2 == p[11]:
