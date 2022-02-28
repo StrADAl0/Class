@@ -9,7 +9,7 @@ class TigerLily:
         self.themes.append(value)
     
     def shift_one(self):
-        self.themes = self.themes[1:] + self.themes[0]
+        self.themes = self.themes[1:] + [self.themes[0]]
     
     def get_themes(self):
         return tuple(self.themes)

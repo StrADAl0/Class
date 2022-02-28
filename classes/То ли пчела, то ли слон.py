@@ -11,9 +11,9 @@ class BeeElephant:
     
     def eat(self, meal, value):
         if meal == 'nectar':
-            self.bee += value
+            self.bee = min(100, self.bee + value)
         else:
-            self.eleph += value
+            self.eleph = min(100, self.eleph + value)
     
     def get_parts(self):
         return (self.bee, self.eleph)
