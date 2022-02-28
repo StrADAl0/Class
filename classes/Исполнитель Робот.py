@@ -16,4 +16,6 @@ class Robot:
             self.path1.append(tuple(self.point))
     
     def path(self):
-        return self.path1
+        t = self.path1[:]
+        self.path1.clear()
+        return t
