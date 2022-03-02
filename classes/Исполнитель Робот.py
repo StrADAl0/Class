@@ -14,8 +14,9 @@ class Robot:
             elif i == 'E':
                 self.point = [self.point[0] + 1, self.point[1]]
             self.path1.append(tuple(self.point))
+        return tuple(self.point)
     
     def path(self):
         t = self.path1[:]
-        self.path1.clear()
+        self.path1 = [self.path1[-1]]
         return t
