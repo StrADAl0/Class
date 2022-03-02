@@ -18,7 +18,10 @@ class Quadratic:
         else:
             ans1 = (-b - d ** (1 / 2))/ (2 * a)
             ans2 = (-b + d ** (1 / 2))/ (2 * a)
-            return [ans1, Quadratic.func(ans1, a, b, c), ans2, Quadratic.func(ans2, a, b, c)]
+            if ans1 >= ans2:
+                return [ans2, Quadratic.func(ans2, a, b, c), ans1, Quadratic.func(ans1, a, b, c)]
+            else:
+                return [ans1, Quadratic.func(ans1, a, b, c), ans2, Quadratic.func(ans2, a, b, c)]
 
     def branch(self):
         if self.a > 0:

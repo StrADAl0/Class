@@ -35,19 +35,28 @@ class SnowFlakes:
             print(*t, sep='')
     
     def freeze(self, n):
-        self.n += n
-        self.empty()
+        for i in range(n):
+            self.grid.insert(0, ['-'] * int(self.n / 2 + 1))
+        for i in range(n):
+            for j in self.grid:
+                j.insert(0, '-')
+        self.n += 2 * n
         self.draw()
     
     def thicken(self):
-        for i in range(int(self.n / 2) - 1):
-            self.grid[i][i + 1] = '*'
-            self.grid[i + 1][i] = '*'
-            self.grid[i][-2] = '*'
-            self.grid[-2][i] = '*'
+        t = 0
+        for i in range(len(self.grid)):
+            if self.grid[-1][i] == '*':
+                t = i 
+        ans = 0
+        for i in range(len(self.grid)):
+            if self.grid[i][t] != '*':
+                ans = i
+        for i in range(-1, -(ans + 1), -1):
+            for j in range(t + 1, len(self.grid())):
+                self.grid[i][j] = '*'
         
 
-
-sf = SnowFlakes(9)
-sf.thaw(2)
+sf = SnowFlakes(29)
+sf.thicken()
 sf.show()
