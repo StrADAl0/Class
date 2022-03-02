@@ -22,7 +22,7 @@ class SnowFlakes:
     
     def thaw(self, n):
         self.empty()
-        self.n -= n
+        self.n -= 2 * n
         self.draw()
         
 
@@ -48,6 +48,6 @@ class SnowFlakes:
         
 
 
-sf = SnowFlakes(15)
-sf.thicken()
+sf = SnowFlakes(9)
+sf.thaw(2)
 sf.show()
