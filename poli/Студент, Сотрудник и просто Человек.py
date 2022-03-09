@@ -27,6 +27,7 @@ class Student:
 
 class Employee:
     positions = ['junior', 'middle', 'senior', 'lead']
+
     def __init__(self, name, company):
         self.name = name
         self.company = company

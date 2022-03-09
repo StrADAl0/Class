@@ -3,10 +3,10 @@ from math import pi
 
 class SquareIntoCircle:
     def __init__(self, side):
-        self.radius = round(2 * side / pi, 3)
+        self.radius = 2 * side / pi
     
     def size(self):
-        return self.radius
+        return round(self.radius, 3)
     
     def area(self):
         return round(pi * (self.radius ** 2), 3)
@@ -14,10 +14,10 @@ class SquareIntoCircle:
 
 class CircleIntoSquare:
     def __init__(self, radius):
-        self.side = round(pi * radius / 2, 3)
+        self.side = pi * radius / 2
     
     def size(self):
-        return self.side
+        return round(self.side, 3)
     
     def area(self):
         return round(self.side ** 2, 3)

@@ -1,6 +1,6 @@
 class ShoppingList:
     def __init__(self, *args):
-        self.list = args
+        self.list = list(args)
     
     def append(self, value):
         self.list.append((value, False))
@@ -23,7 +23,7 @@ class ShoppingList:
 
 class TODOList:
     def __init__(self, *args):
-        self.list = sorted(args, key=lambda x: x[2], reverse=True)
+        self.list = sorted(list(args), key=lambda x: x[2], reverse=True)
     
     def append(self, value, urgency):
         self.list.append((value, urgency, False))
@@ -46,7 +46,7 @@ class TODOList:
 
 class Route:
     def __init__(self, *args):
-        self.list = args
+        self.list = list(args)
     
     def append(self, value, time):
         if int(self.list[-1].split(':')[0]) < int(time.split(':')[0]):
