@@ -50,7 +50,9 @@ class Route:
         self.list = list(args)
     
     def append(self, value, time):
-        if int(self.list[-1][1].split(':')[0]) < int(time.split(':')[0]):
+        if not self.list:
+            self.list.append((value, time, False))
+        elif int(self.list[-1][1].split(':')[0]) < int(time.split(':')[0]):
             self.list.append((value, time, False))
         elif int(self.list[-1][1].split(':')[0]) == int(time.split(':')[0]):
             if int(self.list[-1][1].split(':')[1]) < int(time.split(':')[1]):
