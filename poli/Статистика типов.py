@@ -18,4 +18,3 @@ class TypeStatistics:
         for i in self.dict.keys():
             ans[i] = len(self.dict[i])
         return ans
-
