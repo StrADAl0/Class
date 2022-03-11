@@ -1,5 +1,5 @@
 class TypeStatistics:
-    def __init__(self, *args):
+    def __init__(self, args):
         self.values = args
         self.dict = self.fill()
     
@@ -13,5 +13,9 @@ class TypeStatistics:
     def type_values(self):
         return self.dict
     
-    def type_count(self):
-        return len(self.dict.keys())
+    def type_counts(self):
+        ans = {}
+        for i in self.dict.keys():
+            ans[i] = len(self.dict[i])
+        return ans
+
