@@ -23,11 +23,11 @@ class ShoppingList:
 
 class TODOList:
     def __init__(self, *args):
-        self.list = sorted(list(args), key=lambda x: x[2], reverse=True)
+        self.list = sorted(list(args), key=lambda x: x[1], reverse=True)
     
     def append(self, value, urgency):
         self.list.append((value, urgency, False))
-        self.list = sorted(self.list, key=lambda x: x[2], reverse=True)
+        self.list = sorted(self.list, key=lambda x: x[1], reverse=True)
     
     def values(self):
         return self.list
