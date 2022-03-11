@@ -9,9 +9,9 @@ class ShoppingList:
         return self.list
     
     def check(self, value):
-        for i in filter(lambda x: x[0] == value, self.list):
-            if i[0] == value:
-                i = (value, True)
+        for i in range(len(self.list)):
+            if self.list[i][0] == value:
+                self.list[i] = (value, True)
                 break
     
     def checked_values(self):
@@ -32,9 +32,9 @@ class TODOList:
         return self.list
     
     def check(self, value):
-        for i in filter(lambda x: x[0] == value, self.list):
-            if i[0] == value:
-                i = (i[0], i[1], True)
+        for i in range(len(self.list)):
+            if self.list[i][0] == value:
+                self.list[i] = (self.list[i][0], self.list[i][1], True)
                 break
     
     def checked_values(self):
@@ -50,18 +50,18 @@ class Route:
     
     def append(self, value, time):
         if int(self.list[-1].split(':')[0]) < int(time.split(':')[0]):
-            self.values.append((value, time, False))
+            self.list.append((value, time, False))
         elif int(self.list[-1].split(':')[0]) == int(time.split(':')[0]):
             if int(self.list[-1].split(':')[1]) < int(time.split(':')[1]):
-                self.values.append((value, time, False))
+                self.list.append((value, time, False))
     
     def values(self):
         return self.list
     
     def check(self, value):
-        for i in filter(lambda x: x[0] == value, self.list):
-            if i[0] == value:
-                i = (i[0], i[1], True)
+        for i in range(len(self.list)):
+            if self.list[i][0] == value:
+                self.list[i] = (self.list[i][0], self.list[i][1], True)
                 break
     
     def checked_values(self):
