@@ -8,7 +8,7 @@ class ShoppingList:
     def values(self):
         return self.list
     
-    def check_value(self, value):
+    def check(self, value):
         for i in filter(lambda x: x[0] == value, self.list):
             if i[0] == value:
                 i = (value, True)
@@ -31,7 +31,7 @@ class TODOList:
     def values(self):
         return self.list
     
-    def check_value(self, value):
+    def check(self, value):
         for i in filter(lambda x: x[0] == value, self.list):
             if i[0] == value:
                 i = (i[0], i[1], True)
@@ -58,7 +58,7 @@ class Route:
     def values(self):
         return self.list
     
-    def check_value(self, value):
+    def check(self, value):
         for i in filter(lambda x: x[0] == value, self.list):
             if i[0] == value:
                 i = (i[0], i[1], True)
