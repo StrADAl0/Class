@@ -6,7 +6,7 @@ class TableToLine:
         ans = []
         for i in self.matrix:
             ans += i
-        return ans, len(self.matrix), len(self.matrix[1])
+        return ans, len(self.matrix), len(self.matrix[0])
 
 
 class LineToTable:
@@ -20,9 +20,3 @@ class LineToTable:
             ans.append(self.arr[:self.m])
             self.arr = self.arr[self.m:]
         return ans, self.n, self.m
-
-
-ttl = TableToLine([[1, 2], [3, 4], [5, 6]])
-arr, n, m = ttl.resize()
-print(arr)
-print(f'Resized from {n}x{m}')
