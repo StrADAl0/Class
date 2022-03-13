@@ -9,11 +9,11 @@ class Talking:
         if self.stage:
             self.stage = 0
             self.yes += 1
-            print('moore-moore')
+            return 'moore-moore'
         else:
             self.stage = 1
             self.no += 1
-            print('meow-meow')
+            return 'meow-meow'
     
     def number_yes(self):
         return self.yes
